@@ -7,4 +7,4 @@ then
 fi
 
 sam package --template-file sam/template.yml --output-template-file sam/output.yml --s3-bucket $SAM_BUCKET
-echo y | sam deploy --template-file sam/output.yml --stack-name $SAM_STACK_NAME
+echo y | sam deploy --template-file sam/output.yml --capabilities CAPABILITY_IAM --stack-name $SAM_STACK_NAME
